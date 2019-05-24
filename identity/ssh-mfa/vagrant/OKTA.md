@@ -1,19 +1,6 @@
-**Vault Multi-factor Authentication**
+** Detailed Okta Configuration **
 
-What is it:
-
-**Multi-factor authentication** (MFA) is an authentication method 
-which a computer user is granted access only after successfully
-presenting two or more pieces of evidence (or factors) to
-an authentication  mechanism. These factors include:
-
--   Knowledge (something the user and only the user knows -- typically a
-    password)
-
--   Something in the user's possession (something the user and only the
-    user has -- Valid Cell Phone Number)
-
-Vault Set-Up
+Set-Up
 
 In order to use MFA, an Okta developer account must be obtained from
 Okta.com. WARNING, there are two kinds. Going to okta.com
