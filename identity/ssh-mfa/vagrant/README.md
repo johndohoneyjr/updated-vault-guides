@@ -26,7 +26,7 @@ Draw the audience's attention to the push notification, and remind them about th
 
 In our demo example, in order to gain access to this secret, the person accessing the data must MFA.  Also, be sure to stop the demo at some point to show the clients the Sentinel policy. 
 
-'''
+```
 import "strings"
 import "mfa"
 
@@ -40,18 +40,18 @@ main = rule {
 }
 
 print(request.path)
-'''
+```
 
 Note: Liberally take advantage of Sentinel print().  A lot of understanding of what is happening during development can save a lot of time writing a sentinel policy.
 
 The ACL that can also drove the MFA access should also be shown to show the enhanved capability of Vault Enterrpise:
 
-'''
+```
 path "supersecret/admin" {
  capabilities = ["list", "read"]
  mfa_methods  = ["okta"]
 }
-'''
+```
 
 Demonstrate the MFA for accessing a secret, now that the groundwork has been laid after discussing the Sentinel enforcement and ACL Enterprise enhancements for MFA methods.
 
