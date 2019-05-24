@@ -1,7 +1,7 @@
 # Summary
 This guide demonstrates the following:
-- Sentinel enforcement of Okta multi-factor authentication for EGP access
 - MFA Login
+- Sentinel enforcement of Okta multi-factor authentication for EGP access
 
 ## Prerequisites
 1. Vagrant installed
