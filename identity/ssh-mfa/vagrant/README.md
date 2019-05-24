@@ -45,12 +45,12 @@ Draw the audience's attention to the push notification, and remind them about th
 
 ![](media/demo2.png)
 
-Nest is using the Vault Enterprise MFA associated with paths.  In this example, in order to gain access to this secret, the person accessing the data must MFA.  Also, be sure to stop the demo at some point to show the clients the Sentinel policy. 
+In our demo example, in order to gain access to this secret, the person accessing the data must MFA.  Also, be sure to stop the demo at some point to show the clients the Sentinel policy. 
+
 '''
 import "strings"
 import "mfa"
 
-# Require OKTA MFA validation to succeed
 okta_valid = rule {
    mfa.methods.okta.valid
 }
@@ -62,9 +62,10 @@ main = rule {
 
 print(request.path)
 '''
+
 Note: Liberally take advantage of Sentinel print().  A lot of understanding of what is happening during development can save a lot of time writing a sentinel policy.
 
-The ACL that can also drove the MFA access should also be shown:
+The ACL that can also drove the MFA access should also be shown to show the enhanved capability of Vault Enterrpise:
 
 '''
 path "supersecret/admin" {
@@ -73,9 +74,14 @@ path "supersecret/admin" {
 }
 '''
 
+Demonstrate the MFA for accessing a secret, now that the groundwork has been laid after discussing the Sentinel enforcement and ACL Enterprise enhancements for MFA methods.
+
 ![](media/demo3.png)
 
+Success, MFA in Vault Enterprise enforced MFA to access our demonstration secret.
+
 ![](media/demo4.png)
+
 
 ## Overview 
 ### Okta Authentication and Multi-Factor Authentication
