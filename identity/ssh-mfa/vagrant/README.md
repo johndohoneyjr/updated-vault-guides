@@ -16,7 +16,7 @@ For SE's with a Apple Phone, the Apple Quicktime player can be used to show the 
 
 The first part of the demo is to show off Vaults MFA Login capability with Okta
 
-![](giphy-okta.gif)
+![](giphy-okta)
 
 ![](media/demo1.png)
 
