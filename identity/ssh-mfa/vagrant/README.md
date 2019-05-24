@@ -9,31 +9,8 @@ This guide demonstrates the following:
 1. Vagrant installed
 2. VirtualBox installed
 3. Okta account configured  
-3. Follow the[link for detailed set-up within Okta](./OKTA.md)
-
-   a. Create developer account  
-   b. Create 'okta' group and add developer user account to the group  
-   c. Configure multi-factor authentication with Okta Push mobile app.
-   
-     i. In the admin account, navigate to MFA settings page
-     + <img src="https://raw.githubusercontent.com/hashicorp/vault-guides/master/assets/MFA_setup.png" alt="MFA page" width="300">
-     
-     ii. enable push notifications for Okta verify phone app
-     + <img src="https://raw.githubusercontent.com/hashicorp/vault-guides/master/assets/MFA_settings.png" alt="MFA settings" width="300">
-     
-     iii. In the developer account, go to user settings
-     + <img src="https://raw.githubusercontent.com/hashicorp/vault-guides/master/assets/okta_user_settings.png" 
-alt="user settings" width="300"> 
-
-     iv. Select "Setup" for extra verification
-     +  <img src="https://raw.githubusercontent.com/hashicorp/vault-guides/master/assets/okta_extra_verification.png" alt="extra verification" width="300">
-     
-     v. Generate QR code, download Okta Verify mobile app and scan.
-     + <img src="https://raw.githubusercontent.com/hashicorp/vault-guides/master/assets/okta_qr_code.png" alt="QR code" width="300"> 
-     
-   d. create API key: https://developer.okta.com/docs/api/getting_started/getting_a_token.html
-4. Copy `vars.yaml.example` to `vars.yaml` and update details to match your environment
-5. Done with setup
+3. Follow the [link for detailed set-up within the Okta Developer Portal for MFA](./OKTA.md)
+4. Done with setup
 
 ## Demo Presentation
 
