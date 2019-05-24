@@ -1,4 +1,4 @@
-** Detailed Okta Configuration **
+## ** Detailed Okta Configuration **
 
 Set-Up
 
