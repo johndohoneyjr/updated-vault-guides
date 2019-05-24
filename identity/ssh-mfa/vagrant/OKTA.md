@@ -60,7 +60,7 @@ f.  Your Choice how you want to configure the rule but update the rule
 g.  Next, go to Security Authentication, and enable MFA in the Login,
     click "Create Rule" to save
 
-    ![](media/image8.png)
+![](media/image8.png)
 
 h.  To set-up a Security Token, go to Security \| API \| Token. Be sure
     to save off the Token string to your 1Password for future reference
@@ -78,7 +78,7 @@ j.  Find the "Extra Verification" Canvas, and click (1) "Setup", (2)
     on your phone, find the circle with the plus (on Android) and Scan
     the QR code to add your user
 
-    ![](media/image11.png)
+![](media/image11.png)
 
 k.  Set-Up is done in Okta
 
