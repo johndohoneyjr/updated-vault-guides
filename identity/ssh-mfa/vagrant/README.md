@@ -9,7 +9,8 @@ This guide demonstrates the following:
 1. Vagrant installed
 2. VirtualBox installed
 3. Okta account configured  
-3. Follow the Okta Set-up [a link](./OKTA.md)
+3. Follow the[link for detailed set-up within Okta](./OKTA.md)
+
    a. Create developer account  
    b. Create 'okta' group and add developer user account to the group  
    c. Configure multi-factor authentication with Okta Push mobile app.
