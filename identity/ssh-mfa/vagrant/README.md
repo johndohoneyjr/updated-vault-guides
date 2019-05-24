@@ -7,24 +7,75 @@ This guide demonstrates the following:
 
 ## Prerequisites
 1. Vagrant installed
-1. VirtualBox installed
-1. Okta account configured  
+2. VirtualBox installed
+3. Okta account configured  
    a. Create developer account  
    b. Create 'okta' group and add developer user account to the group  
    c. Configure multi-factor authentication with Okta Push mobile app.
-     1. In the admin account, navigate to MFA settings page
+   
+     i. In the admin account, navigate to MFA settings page
      + <img src="https://raw.githubusercontent.com/hashicorp/vault-guides/master/assets/MFA_setup.png" alt="MFA page" width="300">
-     2. enable push notifications for Okta verify phone app
+     
+     ii. enable push notifications for Okta verify phone app
      + <img src="https://raw.githubusercontent.com/hashicorp/vault-guides/master/assets/MFA_settings.png" alt="MFA settings" width="300">
-     3. In the developer account, go to user settings
+     
+     iii. In the developer account, go to user settings
      + <img src="https://raw.githubusercontent.com/hashicorp/vault-guides/master/assets/okta_user_settings.png" 
 alt="user settings" width="300"> 
-     4. Select "Setup" for extra verification
+
+     iv. Select "Setup" for extra verification
      +  <img src="https://raw.githubusercontent.com/hashicorp/vault-guides/master/assets/okta_extra_verification.png" alt="extra verification" width="300">
-     5. Generate QR code, download Okta Verify mobile app and scan.
+     
+     v. Generate QR code, download Okta Verify mobile app and scan.
      + <img src="https://raw.githubusercontent.com/hashicorp/vault-guides/master/assets/okta_qr_code.png" alt="QR code" width="300"> 
+     
    d. create API key: https://developer.okta.com/docs/api/getting_started/getting_a_token.html
-1. Copy `vars.yaml.example` to `vars.yaml` and update details to match your environment
+4. Copy `vars.yaml.example` to `vars.yaml` and update details to match your environment
+5. Done with setup
+
+## Demo Presentation
+
+For SE's with a Apple Phone, the Apple Quicktime player can be used to show the Okta Verify - Push notifications.  This adds to the demo experience.
+
+The first part of the demo is to show off Vaults MFA Login capability with Okta
+
+![](media/demo1.png)
+
+Draw the audience's attention to the push notification, and remind them about the security implications of 2FA/MFA and how this mitigates Brute Force attacks
+
+![](media/demo2.png)
+
+Nest is using the Vault Enterprise MFA associated with paths.  In this example, in order to gain access to this secret, the person accessing the data must MFA.  Also, be sure to stop the demo at some point to show the clients the Sentinel policy. 
+'''
+import "strings"
+import "mfa"
+
+# Require OKTA MFA validation to succeed
+okta_valid = rule {
+   mfa.methods.okta.valid
+}
+
+main = rule {
+   okta_valid
+
+}
+
+print(request.path)
+'''
+Note: Liberally take advantage of Sentinel print().  A lot of understanding of what is happening during development can save a lot of time writing a sentinel policy.
+
+The ACL that can also drove the MFA access should also be shown:
+
+'''
+path "supersecret/admin" {
+ capabilities = ["list", "read"]
+ mfa_methods  = ["okta"]
+}
+'''
+
+![](media/demo3.png)
+
+![](media/demo4.png)
 
 ## Overview 
 ### Okta Authentication and Multi-Factor Authentication
