@@ -18,7 +18,7 @@ The first part of the demo is to show off Vaults MFA Login capability with Okta
 
 ![](giphy-okta.gif)
 
-![](media/demo1.png)
+<!--![](media/demo1.png)-->
 
 Draw the audience's attention to the push notification, and remind them about the security implications of 2FA/MFA and how this mitigates Brute Force attacks
 
