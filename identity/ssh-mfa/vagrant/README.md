@@ -1,9 +1,7 @@
 # Summary
 This guide demonstrates the following:
-- Sentinel enforcement of Okta multi-factor authentication
-- SSH certificate authority access management based on Okta MFA
-- SSH one-time password access management based on Okta MFA
-- AWS secret backend allowing for short-lived AWS credentials
+- Sentinel enforcement of Okta multi-factor authentication for EGP access
+- MFA Login
 
 ## Prerequisites
 1. Vagrant installed
