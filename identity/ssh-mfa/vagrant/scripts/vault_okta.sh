@@ -19,26 +19,29 @@ vault kv put verysecret/sensitive key=value password=35616164316lasfdasfasdfasdf
 logger "Create Vault policies"
 echo '
 path "sys/mounts" {
-  capabilities = ["list","read"]
+ capabilities = ["list","read"]
 }
 path "secret/*" {
-  capabilities = ["list", "read"]
+ capabilities = ["list", "read"]
 }
 path "secret/me" {
-  capabilities = ["create", "read", "update", "delete", "list"]
+ capabilities = ["create", "read", "update", "delete", "list"]
 }
-path "supersecret/*" {
-  capabilities = ["list", "read"]
-  mfa_methods = ["okta"]
+path "supersecret/" {
+ capabilities = ["list", "read"]
+}
+path "supersecret/admin" {
+ capabilities = ["list", "read"]
+ mfa_methods = ["okta"]
 }
 path "ssh-client-signer/*" {
-  capabilities = ["read","list","create","update"]
+ capabilities = ["read","list","create","update"]
 }
 path "aws/*" {
-  capabilities = ["read","list","create","update"]
+ capabilities = ["read","list","create","update"]
 }
 path "ssh/*" {
-  capabilities = ["read","list","create","update"]
+ capabilities = ["read","list","create","update"]
 }'  | vault policy write okta -
 
 logger "Enable Okta backend in Vault"
