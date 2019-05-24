@@ -2,7 +2,7 @@
 
 What is it:
 
-**Multi-factor authentication** (MFA) is an authentication method in
+**Multi-factor authentication** (MFA) is an authentication method 
 which a computer user is granted access only after successfully
 presenting two or more pieces of evidence (or factors) to
 an authentication  mechanism. These factors include:
