@@ -42,20 +42,20 @@ b.  Create \'okta\' group and add developer user account to the group.
 c.  Make sure you click "Classic UI" That is not the default, and none
     of the screen shots will make sense from here on in this tutorial.
 
-    ![](media/image4.png)
+![](media/image4.png)
 
 d.  Configure multi-factor authentication with Okta Push mobile app.
 
-    ![](media/image5.png)
+![](media/image5.png)
 
 e.  Next, navigate to Factor Enrollment, Click "Add Rule"
 
-    ![](media/image6.png)
+![](media/image6.png)
 
 f.  Your Choice how you want to configure the rule but update the rule
     to save it.
 
-> ![](media/image7.png)
+![](media/image7.png)
 
 g.  Next, go to Security Authentication, and enable MFA in the Login,
     click "Create Rule" to save
